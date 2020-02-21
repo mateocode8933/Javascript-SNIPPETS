@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="member">
+        <h1>Natalia Pruszek</h1>
+        <h2>PHP Developer</h2>
+        <img class="color" src="/img/img1color.jpeg" alt="Natalia Pruszek">
+        <img class="grey" src="/img/img1grey.jpeg">
+    </div>
+    </div>
+    <script>
+        let activeElement = 0;
+        const name = document.querySelector('h1');
+        const proffesion = document.querySelector('h2');
+        const imageColor = document.querySelector('.color');
+        const imageGrey = document.querySelector('.grey');
+        // informacje w tablicach o elementach podmienianych 
+        const names = ["Natalia Pruszek", "Marcin Krajewski", "Kuba Jankowiak"];
+
+        const proffesions = ["PHP Developer", "UI/UX - Designer", "Front-End - Developer"];
+
+        const colorImages = ["/img/img1color.jpeg", "/img/img2color.jpeg", "/img/img3color.jpeg"];
+
+        const greyImages = ["/img/img1grey.jpeg", "/img/img2grey.jpeg", "/img/img3grey.jpeg"];
+
+        function changeElement() {
+
+            activeElement++
+            // jesli activeElement jest rowny names.lenght ^ czyli tutaj 3 to wyzeruj go
+            if (activeElement == names.length) {
+
+                activeElement = 0;
+            }
+
+            imageColor.src = colorImages[activeElement];
+            imageGrey.src = greyImages[activeElement];
+            name.textContent = names[activeElement];
+            proffesion.textContent = proffesions[activeElement];
+        }
+
+        setInterval(changeElement, 4100)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    padding-top: 50%;
+    font-size: 10px;
+}
+
+.member {
+    width: 100%;
+    text-align: center;
+    color: rgba(34, 27, 27, 0.795);
+}
+
+
+
+.color {
+    height: 30vh;
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    z-index: 1;
+    animation: color 4s linear infinite;
+}
+
+.grey {
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    filter: grayscale(1);
+    opacity: .5;
+    animation: greyy 4s linear infinite;
+}
+
+img {
+    z-index: -1;
+}
+
+h1,
+h2 {
+    animation: text 4s linear infinite;
+}
+
+h1 {
+    font-size: 2.2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+@keyframes color {
+    13% {
+        right: 10%;
+    }
+
+    85% {
+        opacity: 1;
+    }
+
+    87% {
+        right: 15%;
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        right: 15%;
+    }
+
+}
+
+@keyframes greyy {
+
+    87% {
+        opacity: 1;
+    }
+
+    100% {
+        left: 10%;
+        opacity: 0;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes text {
+    87% {
+        opacity: 1;
+    }
+
+    100% {
+
+        opacity: 0;
+        transform: scale(1.2);
+    }
+}
